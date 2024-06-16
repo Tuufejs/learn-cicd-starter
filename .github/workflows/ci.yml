@@ -30,9 +30,6 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
 
-      - name: Install staticcheck
-        run: go install honnef.co/go/tools/cmd/staticcheck@latest
-
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
@@ -41,7 +38,8 @@ jobs:
       - name: Check formatting
         run: test -z $(go fmt ./...)
 
-      - name: Static check
-        run: staticcheck ./...  
+      - name: Install staticcheck
+        run: go install honnef.co/go/tools/cmd/staticcheck@latest
 
-
+      - name: Run staticcheck
+        run: staticcheck ./...
