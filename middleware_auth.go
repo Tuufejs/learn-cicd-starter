@@ -26,8 +26,3 @@ func (cfg *apiConfig) middlewareAuth(handler authedHandler) http.HandlerFunc {
 		handler(w, r, user)
 	}
 }
-
-func unused() {
-	// this function does nothing
-	// and is called nowhere
-}
