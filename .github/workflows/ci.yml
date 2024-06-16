@@ -20,3 +20,4 @@ jobs:
 
       - name: run go tests
         run: go test ./...
+
