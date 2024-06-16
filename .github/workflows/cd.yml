@@ -19,7 +19,7 @@ jobs:
           go-version: '1.22'
 
       - name: build binary
-        run: chmod scripts/buildprod.sh && scripts/buildprod.sh
+        run: chmod +x scripts/buildprod.sh; scripts/buildprod.sh
 
     
       
