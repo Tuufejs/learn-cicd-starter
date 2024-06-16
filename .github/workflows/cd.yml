@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  deploy:
+  deployment:
     name: Deploy
     runs-on: ubuntu-latest
 
@@ -20,4 +20,6 @@ jobs:
 
       - name: build binary
         run: scripts/buildprod.sh
+
+    
       
