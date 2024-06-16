@@ -19,8 +19,14 @@ jobs:
           go-version: '1.22'
 
       - name: run go tests
-
         run: go test ./... -cover
+      
+      - name: Install sec
+        run: go install github.com/securego/gosec/v2/cmd/gosec@latest
+      
+      - name: Run sec
+        run: gosec ./...
+    
 
   style:
     name: Style
